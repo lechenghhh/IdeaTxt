@@ -45,8 +45,9 @@ public class SettingConfig {
         return pc.getInt(PAGE_NUM, 1);
     }
 
-    public void setPageNum(int pageNum) {
+    public int setPageNum(int pageNum) {
         pc.setValue(PAGE_NUM, pageNum, 1);
+        return pc.getInt(PAGE_NUM,1);
     }
 
     public String getFilePath() {
