@@ -7,6 +7,9 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 
 import java.io.File;
+import java.io.Reader;
+
+import TxtTool.Utils.RandomAccessFileUtils.TxtReader;
 
 /*测试程序*/
 public class SettingFilePath extends AnAction {
@@ -17,7 +20,7 @@ public class SettingFilePath extends AnAction {
         String filePath = Messages.showInputDialog(
                 project,
                 "当前路径:" + SettingConfig.instance().getFilePath(),
-                "请设置文件路径(重启后生效)",
+                "请设置文件路径",
                 Messages.getQuestionIcon());
         if (!new File(filePath).exists()) {
             Messages.showMessageDialog(project,
@@ -27,5 +30,6 @@ public class SettingFilePath extends AnAction {
             return;
         }
         SettingConfig.instance().setFilePath(filePath);
+        TxtReader.instance().init(filePath);
     }
 }
