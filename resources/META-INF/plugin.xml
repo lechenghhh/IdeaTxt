@@ -1,17 +1,17 @@
 <idea-plugin>
-    <id>com.your.company.unique.plugin.id</id>
-    <name>Plugin display name here</name>
+    <id>com.lecheng.hello.idextxt</id>
+    <name>IdeaTxt</name>
     <version>1.0</version>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="lechenggood@foxmail.com" url="https://github.com/lechenghhh/IdeaTxt">NCS Earth Defense Center</vendor>
 
     <description><![CDATA[
-      Enter short description for your plugin here.<br>
-      <em>most HTML tags may be used</em>
+      看小说神器，alt + o 下翻页  alt + i 显示log<br>
+      <em></em>
     ]]></description>
 
     <change-notes><![CDATA[
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>
+      nothing<br>
+      <em></em>
     ]]>
     </change-notes>
 
