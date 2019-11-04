@@ -10,19 +10,15 @@ import com.intellij.openapi.wm.ToolWindowManager;
 import javax.swing.JLabel;
 
 import TxtTool.Menu.SettingConfig;
-import TxtTool.Utils.RandomAccessFileUtils.Reader;
-
-import static TxtTool.Action.ShowLog.TOOL_WINDOW_ID;
+import TxtTool.Utils.RandomAccessFileUtils.TxtReader;
 
 public class NextPage extends AnAction {
-    public static final String TOOL_WINDOW_ID = "IdeaTxtWindow";
+    public static final String TOOL_WINDOW_ID = "IdeaTxt";
 
     @Override
     public void actionPerformed(AnActionEvent e) {
         Project project = (Project) e.getData(PlatformDataKeys.PROJECT);
-
-        Reader reader = new Reader();
-
+        TxtReader.instance();
 
         ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow(TOOL_WINDOW_ID);
         if (toolWindow != null) {
@@ -37,7 +33,7 @@ public class NextPage extends AnAction {
                 JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(0));
                 if (jLabel != null) {
                     int p = SettingConfig.instance().getPageNum() ;
-                    jLabel.setText(reader.toPage(p++));
+                    jLabel.setText(TxtReader.instance().toPage(p++));
                     SettingConfig.instance().setPageNum(p);
                 }
             } catch (Exception e1) {

@@ -3,9 +3,10 @@ package TxtTool.Utils.RandomAccessFileUtils;
 import java.io.*;
 import java.util.ArrayList;
 
+import TxtTool.Menu.SettingConfig;
 import TxtTool.Utils.TxtFormat;
 
-public class Reader {
+public class TxtReader {
 
     private RandomAccessFile randomAccessFile;
     private ArrayList<Long> lineArr;//创建长整型动态数组lineArr
@@ -16,6 +17,24 @@ public class Reader {
     private int page = 0;  //页码
     private int lineCount = 0; //行计数器
     private int lineSum;//总行数
+
+    private volatile static TxtReader txtReader;
+
+    private TxtReader() {
+    }
+
+    public static TxtReader instance() {
+        if (txtReader == null) {
+            synchronized (TxtReader.class) {
+                if (txtReader == null) {
+                    txtReader = new TxtReader();
+                    SettingConfig.instance();
+                    txtReader.init(SettingConfig.instance().getFilePath());
+                }
+            }
+        }
+        return txtReader;
+    }
 
     public String init(String filePath) {
 

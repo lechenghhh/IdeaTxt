@@ -26,7 +26,7 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
-        <toolWindow id="IdeaTxtWindow" secondary="true" icon="/ic.png" anchor="bottom"
+        <toolWindow id="IdeaTxt" secondary="true" icon="/ic.png" anchor="bottom"
             canCloseContents="true" factoryClass="TxtTool.Window.TxtToolWindow" />
     </extensions>
 

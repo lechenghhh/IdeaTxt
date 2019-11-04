@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import TxtTool.Menu.SettingConfig;
-import TxtTool.Utils.RandomAccessFileUtils.Reader;
+import TxtTool.Utils.RandomAccessFileUtils.TxtReader;
 import TxtTool.Utils.Utils;
 
 /**
@@ -36,14 +36,15 @@ public class TxtToolWindow implements ToolWindowFactory {
         toolWindow.getContentManager().addContent(content);
 
         //初始化
-        Reader reader = new Reader();
+        TxtReader.instance();
         fieldPage.setText(SettingConfig.instance().getPageNum() + "");
         File txtFile = new File(SettingConfig.instance().getFilePath());
         if (!txtFile.exists()) {
-            showTips( "txt not found !");
+            showTips("Txt Not Found !");
             return;
         }
-        lableText.setText(reader.init(SettingConfig.instance().getFilePath()));
+//        lableText.setText(TxtReader.instance().init(SettingConfig.instance().getFilePath()));
+        lableText.setText("Hello World !");
 
         //设置按钮监听
         fieldPage.addActionListener(e -> fieldPage.setText(fieldPage.getText().replaceAll("^[0-9]", "")));//限定只能输入数字
@@ -51,11 +52,11 @@ public class TxtToolWindow implements ToolWindowFactory {
         btnGo.addActionListener(e -> {
             if (fieldPage.getText().equals("")) {//如果框内为空则为下一页
                 int p = SettingConfig.instance().getPageNum();
-                lableText.setText(reader.toPage(p++));
+                lableText.setText(TxtReader.instance().toPage(p++));
                 SettingConfig.instance().setPageNum(p);
             } else {//如果已经填了值则跳转 并置空输入框
                 int p = Integer.parseInt(fieldPage.getText());
-                lableText.setText(reader.toPage(p++));
+                lableText.setText(TxtReader.instance().toPage(p++));
                 SettingConfig.instance().setPageNum(p);
                 fieldPage.setText("");
 
@@ -69,7 +70,7 @@ public class TxtToolWindow implements ToolWindowFactory {
 
 
     //显示提示
-    public void showTips( String s) {
+    public void showTips(String s) {
         lableText.setText(s);
     }
 

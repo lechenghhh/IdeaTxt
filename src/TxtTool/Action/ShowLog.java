@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import TxtTool.Utils.Utils;
 
 public class ShowLog extends AnAction {
-    public static final String TOOL_WINDOW_ID = "IdeaTxtWindow";
+    public static final String TOOL_WINDOW_ID = "IdeaTxt";
 
     @Override
     public void actionPerformed(AnActionEvent e) {
