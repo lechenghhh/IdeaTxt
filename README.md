@@ -1,7 +1,7 @@
 # IdeaTxt
 Idea Plugins
 
-## 请下载 IdeaTxt.jar 插件
+## 请下载 IdeaTxt.jar
 
 ## 1.安装方式:  setting -> plugin ->  install plugin from disk
 
