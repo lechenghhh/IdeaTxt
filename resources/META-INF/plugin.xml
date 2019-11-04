@@ -1,0 +1,60 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Plugin display name here</name>
+  <version>1.0</version>
+  <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+  <description><![CDATA[
+      Enter short description for your plugin here.<br>
+      <em>most HTML tags may be used</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <toolWindow id="IdeaTxt" secondary="true" icon="/ic.png" anchor="bottom"
+        factoryClass="TxtTool.Window.TxtToolFactory" />
+  </extensions>
+
+  <application-components>
+    <component>
+      <implementation-class>TxtTool.Window.TxtToolFactory</implementation-class>
+    </component>
+  </application-components>
+
+  <actions>
+
+    <group id="IdeaTxt.Setting" text="Window" description="IdeaTxt Setting">
+      <add-to-group group-id="WindowMenu" anchor="last" />
+      <action id="IdeaTxt.Setting.FilePath" class="TxtTool.Menu.SettingFilePath"
+          text="设置文档路径" />
+      <action id="IdeaTxt.Setting.TextNum" class="TxtTool.Menu.SettingTextNum" text="设置每页字数">
+        <keyboard-shortcut first-keystroke="alt o" keymap="$default" />
+      </action>
+      <!--<action id="IdeaTxt.Setting.TextSize" class="TxtTool.Menu.SettingTextNum" text="设置字体大小" />-->
+    </group>
+  </actions>
+
+  <!--<actions>-->
+    <!--<group id="MyPlugin.SampleMenu" text="lest setting" description="Sample menu">-->
+      <!--<add-to-group group-id="MainMenu" anchor="last"  />-->
+      <!--<action id="Myplugin.Textboxes" class="TextBoxes" text="Te222es" description="A test menu item" />-->
+    <!--</group>-->
+    <!--&lt;!&ndash; Add your actions here &ndash;&gt;-->
+  <!--</actions>-->
+
+</idea-plugin>

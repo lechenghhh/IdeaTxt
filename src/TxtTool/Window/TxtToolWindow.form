@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TxtTool.Window.TxtToolWindow">
+  <grid id="27dc6" binding="container" layout-manager="FlowLayout" hgap="1" vgap="1" flow-align="2">
+    <constraints>
+      <xy x="6" y="382" width="968" height="41"/>
+    </constraints>
+    <properties>
+      <autoscrolls value="true"/>
+      <doubleBuffered value="true"/>
+      <enabled value="true"/>
+      <focusCycleRoot value="false"/>
+      <focusTraversalPolicyProvider value="false"/>
+      <foreground color="-12828863"/>
+      <inheritsPopupMenu value="false"/>
+      <maximumSize width="2000" height="200"/>
+      <visible value="true"/>
+    </properties>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="false"/>
+    </clientProperties>
+    <border type="empty" title="">
+      <title-color color="-14078658"/>
+    </border>
+    <children>
+      <component id="5ced9" class="javax.swing.JLabel" binding="lableText">
+        <constraints/>
+        <properties>
+          <horizontalAlignment value="4"/>
+          <preferredSize width="1600" height="20"/>
+          <text value="Hello World !"/>
+        </properties>
+      </component>
+      <component id="ed46d" class="javax.swing.JTextField" binding="fieldPage">
+        <constraints/>
+        <properties>
+          <preferredSize width="36" height="24"/>
+        </properties>
+      </component>
+      <component id="5fceb" class="javax.swing.JButton" binding="btnGo">
+        <constraints/>
+        <properties>
+          <background color="-12828863"/>
+          <borderPainted value="false"/>
+          <preferredSize width="24" height="24"/>
+          <text value="&gt;"/>
+          <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="3edc1" class="javax.swing.JButton" binding="btnLog">
+        <constraints/>
+        <properties>
+          <background color="-12828863"/>
+          <borderPainted value="false"/>
+          <hideActionText value="false"/>
+          <preferredSize width="24" height="24"/>
+          <text value="x"/>
+          <toolTipText value=""/>
+        </properties>
+        <clientProperties>
+          <html.disable class="java.lang.Boolean" value="false"/>
+        </clientProperties>
+      </component>
+    </children>
+  </grid>
+</form>
