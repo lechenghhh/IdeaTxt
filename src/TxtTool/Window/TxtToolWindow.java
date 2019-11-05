@@ -58,7 +58,6 @@ public class TxtToolWindow implements ToolWindowFactory {
                 lableText.setText(TxtReader.instance().toPage(p++));
                 SettingConfig.instance().setPageNum(p);
                 fieldPage.setText("");
-
             }
         });
     }

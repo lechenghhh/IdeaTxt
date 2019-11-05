@@ -43,10 +43,10 @@
         <group id="IdeaTxt.Setting" text="Window" description="IdeaTxt Setting">
             <add-to-group group-id="WindowMenu" anchor="last" />
             <action id="IdeaTxt.Setting.NextPage" class="TxtTool.Action.NextPage" text="下一页">
-                <keyboard-shortcut first-keystroke="alt o" keymap="$default" />
+                <keyboard-shortcut first-keystroke="alt ]" keymap="$default" />
             </action>
             <action id="IdeaTxt.Setting.ShowLog" class="TxtTool.Action.ShowLog" text="显示调试">
-                <keyboard-shortcut first-keystroke="alt i" keymap="$default" />
+                <keyboard-shortcut first-keystroke="alt [" keymap="$default" />
             </action>
             <action id="IdeaTxt.Setting.FilePath" class="TxtTool.Menu.SettingFilePath"
                 text="设置文件路径" />

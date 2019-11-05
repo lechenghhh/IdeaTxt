@@ -42,7 +42,7 @@
           <background color="-12828863"/>
           <borderPainted value="false"/>
           <preferredSize width="24" height="24"/>
-          <text value="&gt;"/>
+          <text value="]"/>
           <toolTipText value=""/>
         </properties>
       </component>
@@ -53,7 +53,7 @@
           <borderPainted value="false"/>
           <hideActionText value="false"/>
           <preferredSize width="24" height="24"/>
-          <text value="x"/>
+          <text value="["/>
           <toolTipText value=""/>
         </properties>
         <clientProperties>
