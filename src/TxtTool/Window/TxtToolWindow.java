@@ -42,7 +42,12 @@ public class TxtToolWindow implements ToolWindowFactory {
 
         //设置按钮监听
         fieldPage.addActionListener(e -> fieldPage.setText(fieldPage.getText().replaceAll("^[0-9]", "")));//限定只能输入数字
-        btnLog.addActionListener(e -> Utils.showLog(lableText));//显示伪装
+        btnLog.addActionListener(e -> {
+            Utils.showLog(lableText);
+            int p = SettingConfig.instance().getPageNum();
+            TxtReader.instance().toPage(p--);
+            SettingConfig.instance().setPageNum(p);
+        });//显示伪装
         btnGo.addActionListener(e -> {
             if (fieldPage.getText().equals("")) {//如果框内为空则为下一页
                 int p = SettingConfig.instance().getPageNum();

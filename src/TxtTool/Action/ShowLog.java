@@ -9,6 +9,8 @@ import com.intellij.openapi.wm.ToolWindowManager;
 
 import javax.swing.JLabel;
 
+import TxtTool.Menu.SettingConfig;
+import TxtTool.Utils.RandomAccessFileUtils.TxtReader;
 import TxtTool.Utils.Utils;
 
 public class ShowLog extends AnAction {
@@ -31,6 +33,9 @@ public class ShowLog extends AnAction {
                 JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(0));
                 if (jLabel != null) {
                     Utils.showLog(jLabel);
+                    int p = SettingConfig.instance().getPageNum();
+                    TxtReader.instance().toPage(p--);
+                    SettingConfig.instance().setPageNum(p);
                 }
             } catch (Exception e1) {
                 e1.printStackTrace();
