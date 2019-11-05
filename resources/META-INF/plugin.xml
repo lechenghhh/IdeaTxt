@@ -2,7 +2,9 @@
     <id>com.lecheng.hello.idextxt</id>
     <name>IdeaTxt</name>
     <version>1.0</version>
-    <vendor email="lechenggood@foxmail.com" url="https://github.com/lechenghhh/IdeaTxt">NCS Earth Defense Center</vendor>
+    <vendor email="lechenggood@foxmail.com" url="https://github.com/lechenghhh/IdeaTxt">NCS Earth
+        Defense Center
+    </vendor>
 
     <description><![CDATA[
       看小说神器，alt + o 下翻页  alt + i 显示log<br>
@@ -10,7 +12,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      nothing<br>
+      lechenggood@foxmail.com<br>
       <em></em>
     ]]>
     </change-notes>
@@ -27,7 +29,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
         <toolWindow id="IdeaTxt" secondary="true" icon="/ic.png" anchor="bottom"
-            canCloseContents="true" factoryClass="TxtTool.Window.TxtToolWindow" />
+            factoryClass="TxtTool.Window.TxtToolWindow" />
     </extensions>
 
     <application-components>
@@ -47,9 +49,9 @@
                 <keyboard-shortcut first-keystroke="alt i" keymap="$default" />
             </action>
             <action id="IdeaTxt.Setting.FilePath" class="TxtTool.Menu.SettingFilePath"
-                text="设置文档路径" />
-            <action id="IdeaTxt.Setting.TextNum" class="TxtTool.Menu.SettingTextNum" text="设置每页字数">
-            </action>
+                text="设置文件路径" />
+            <action id="IdeaTxt.Setting.TextNum" class="TxtTool.Menu.SettingTextNum"
+                text="设置每页字数"></action>
 
             <!--<action id="IdeaTxt.Setting.TextSize" class="TxtTool.Menu.SettingTextNum" text="设置字体大小" />-->
         </group>

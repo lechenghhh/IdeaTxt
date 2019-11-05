@@ -38,12 +38,6 @@ public class TxtToolWindow implements ToolWindowFactory {
         //初始化
         TxtReader.instance();
         fieldPage.setText(SettingConfig.instance().getPageNum() + "");
-        File txtFile = new File(SettingConfig.instance().getFilePath());
-        if (!txtFile.exists()) {
-            showTips("Txt Not Found !");
-            return;
-        }
-//        lableText.setText(TxtReader.instance().init(SettingConfig.instance().getFilePath()));
         lableText.setText("Hello World !");
 
         //设置按钮监听

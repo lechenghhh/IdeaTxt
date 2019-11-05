@@ -37,18 +37,23 @@ public class TxtReader {
     }
 
     public String init(String filePath) {
+        File theFile = new File(filePath);
+        if (!theFile.exists()){
+            return "File Not Found";
+        }
+
 
         String result = "";
 
         TxtFormat.Format();//先对txt进行格式化
 
-        filePath += ".cache";//为了不锁定源文件，所以创建一个副本，对副本进行操作
-        //调用posArray类posget方法（带参）
-        PosArray array = new PosArray();
-        lineArr = new ArrayList<Long>();
-        lineArr = array.posget(filePath);
-
         try {
+            filePath += ".cache";//为了不锁定源文件，所以创建一个副本，对副本进行操作
+            //调用posArray类posget方法（带参）
+            PosArray array = new PosArray();
+            lineArr = new ArrayList<Long>();
+            lineArr = array.posget(filePath);
+
             File file = new File(filePath);//指定文件路径（命令行参数输入）
             randomAccessFile = new RandomAccessFile(file, "r");//构造方法，以只读方式读文件
             randomAccessFile.seek(position);//跳转到当前指针位置
@@ -196,7 +201,7 @@ public class TxtReader {
             }
             //输入页码超过文本页码范围，提示出错
             else {
-                result = "输入页码超过文本页码范围";
+                result = "页码超过文本范围/文本不存在";
             }
         } catch (Exception e) {
             e.printStackTrace();
