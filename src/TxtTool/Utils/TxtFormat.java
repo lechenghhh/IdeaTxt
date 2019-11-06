@@ -59,9 +59,9 @@ public class TxtFormat {
                 //打开修改后的文档
                 //Runtime.getRuntime().exec("notepad " + newFile.getAbsolutePath());
 
-                System.out.println("TXT格式清除完成！");
+                System.out.println("文件格式清除完成");
             } else {
-                System.out.println("TXT路径不存在或输入的不是文件夹路径！");
+                System.out.println("文件路径不存在或输入的不是文件夹路径");
                 System.exit(0);
             }
         } catch (IOException e) {
@@ -116,10 +116,10 @@ public class TxtFormat {
         try {
             writer.write(buffer.toString());
             writer.close();
-            System.out.println("TXT格式化完成");
+            System.out.println("文件格式化完成");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("TXT格式化失败");
+            System.out.println("文件格式化失败");
         }
 
         return buffer.toString();

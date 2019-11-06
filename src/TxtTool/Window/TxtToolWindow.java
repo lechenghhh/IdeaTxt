@@ -32,7 +32,7 @@ public class TxtToolWindow implements ToolWindowFactory {
     public void createToolWindowContent(Project project, ToolWindow toolWindow) {
         // 将显示面板添加到显示区
         ContentFactory contentFactory = ContentFactory.SERVICE.getInstance();
-        Content content = contentFactory.createContent(getContent(), "Control", false);
+        Content content = contentFactory.createContent(getContent(), "", false);
         toolWindow.getContentManager().addContent(content);
 
         //初始化
