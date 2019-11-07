@@ -201,7 +201,7 @@ public class TxtReader {
             }
             //输入页码超过文本页码范围，提示出错
             else {
-                result = "页码超过文本范围/文本不存在 ";
+                result = "页码超过文本范围/文本不存在 " + jump + "/" + lineSum + " ";
             }
         } catch (Exception e) {
             e.printStackTrace();
