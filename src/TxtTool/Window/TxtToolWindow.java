@@ -34,7 +34,7 @@ public class TxtToolWindow implements ToolWindowFactory {
         //初始化
         TxtReader.instance();
         SettingConfig.instance().setPageNum(SettingConfig.instance().getPageNum() - 1);//因为next会下一页，所以先减少1
-        lableText.setText("Hello World !");
+        lableText.setText("Hello World ! ");
 
         //设置按钮监听
         btnLog.addActionListener(e -> {
