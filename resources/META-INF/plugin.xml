@@ -40,7 +40,8 @@
 
     <actions>
 
-        <group id="IdeaTxt.Setting" text="Window" description="IdeaTxt Setting">
+        <group id="IdeaTxt.Setting" text="IdeaTxt Setting" description="IdeaTxt Setting" popup="true">
+
             <add-to-group group-id="WindowMenu" anchor="last" />
             <action id="IdeaTxt.Setting.NextPage" class="TxtTool.Action.NextPage" text="下一页">
                 <keyboard-shortcut first-keystroke="alt p" keymap="$default" />
@@ -48,12 +49,10 @@
             <action id="IdeaTxt.Setting.ShowLog" class="TxtTool.Action.ShowLog" text="显示调试">
                 <keyboard-shortcut first-keystroke="alt o" keymap="$default" />
             </action>
-            <action id="IdeaTxt.Setting.FilePath" class="TxtTool.Menu.SettingFilePath"
-                text="设置文件路径" />
-            <action id="IdeaTxt.Setting.TextNum" class="TxtTool.Menu.SettingTextNum"
-                text="设置每页字数"></action>
+            <action id="IdeaTxt.Setting.TurnToPage" class="TxtTool.Action.TurnToPage" text="跳转页码" />
+            <action id="IdeaTxt.Setting.FilePath" class="TxtTool.Action.FilePath" text="设置文件路径" />
+            <action id="IdeaTxt.Setting.WordNum" class="TxtTool.Action.WordNum" text="设置字数" />
 
-            <!--<action id="IdeaTxt.Setting.TextSize" class="TxtTool.Menu.SettingTextNum" text="设置字体大小" />-->
         </group>
 
     </actions>

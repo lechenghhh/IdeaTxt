@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import TxtTool.Menu.SettingConfig;
+import TxtTool.Action.SettingConfig;
 
 public class TxtFormat {
 //    private static String path = "C:/Users/User/text.txt";

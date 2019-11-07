@@ -44,7 +44,7 @@
           <html.disable class="java.lang.Boolean" value="false"/>
         </clientProperties>
       </component>
-      <component id="5fceb" class="javax.swing.JButton" binding="btnGo">
+      <component id="5fceb" class="javax.swing.JButton" binding="btnNext">
         <constraints/>
         <properties>
           <background color="-12828863"/>
@@ -52,12 +52,6 @@
           <preferredSize width="24" height="24"/>
           <text value="P"/>
           <toolTipText value=""/>
-        </properties>
-      </component>
-      <component id="ed46d" class="javax.swing.JTextField" binding="fieldPage">
-        <constraints/>
-        <properties>
-          <preferredSize width="36" height="24"/>
         </properties>
       </component>
     </children>

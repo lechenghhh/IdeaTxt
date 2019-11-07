@@ -1,4 +1,4 @@
-package TxtTool.Menu;
+package TxtTool.Action;
 
 import com.intellij.ide.util.PropertiesComponent;
 
@@ -17,7 +17,7 @@ public class SettingConfig {
         pc = PropertiesComponent.getInstance();
         System.out.println("FilePath=" + getFilePath());
         System.out.println("PageNum=" + getPageNum());
-        System.out.println("TextNum=" + getTextNum());
+        System.out.println("WordNum=" + getTextNum());
         System.out.println("TextSize=" + getTextSize());
     }
 

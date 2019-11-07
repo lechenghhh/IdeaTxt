@@ -9,7 +9,6 @@ import com.intellij.openapi.wm.ToolWindowManager;
 
 import javax.swing.JLabel;
 
-import TxtTool.Menu.SettingConfig;
 import TxtTool.Utils.RandomAccessFileUtils.TxtReader;
 
 public class NextPage extends AnAction {

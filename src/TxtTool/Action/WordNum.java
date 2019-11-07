@@ -1,23 +1,15 @@
-package TxtTool.Menu;
+package TxtTool.Action;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.wm.ToolWindow;
-import com.intellij.openapi.wm.ToolWindowManager;
-import com.intellij.ui.content.Content;
-import com.intellij.ui.content.ContentFactory;
-
-import javax.swing.JPanel;
 
 import TxtTool.Utils.RandomAccessFileUtils.TxtReader;
 
-import static TxtTool.Action.NextPage.TOOL_WINDOW_ID;
-
 /*测试程序*/
-public class SettingTextNum extends AnAction {
+public class WordNum extends AnAction {
 
     public void actionPerformed(AnActionEvent event) {
         Project project = (Project) event.getData(PlatformDataKeys.PROJECT);

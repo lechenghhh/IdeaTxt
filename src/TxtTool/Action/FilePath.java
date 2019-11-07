@@ -1,4 +1,4 @@
-package TxtTool.Menu;
+package TxtTool.Action;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -7,12 +7,11 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
 
 import java.io.File;
-import java.io.Reader;
 
 import TxtTool.Utils.RandomAccessFileUtils.TxtReader;
 
 /*测试程序*/
-public class SettingFilePath extends AnAction {
+public class FilePath extends AnAction {
 
     public void actionPerformed(AnActionEvent event) {
         Project project = (Project) event.getData(PlatformDataKeys.PROJECT);

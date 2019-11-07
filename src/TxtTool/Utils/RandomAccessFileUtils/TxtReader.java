@@ -3,7 +3,7 @@ package TxtTool.Utils.RandomAccessFileUtils;
 import java.io.*;
 import java.util.ArrayList;
 
-import TxtTool.Menu.SettingConfig;
+import TxtTool.Action.SettingConfig;
 import TxtTool.Utils.TxtFormat;
 
 public class TxtReader {
