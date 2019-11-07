@@ -38,7 +38,7 @@ public class TxtReader {
 
     public String init(String filePath) {
         File theFile = new File(filePath);
-        if (!theFile.exists()){
+        if (!theFile.exists()) {
             return "File Not Found";
         }
 
@@ -196,7 +196,7 @@ public class TxtReader {
                 }
                 position = randomAccessFile.getFilePointer();
                 page = jump;
-                result += " " + page + "/" + lineSum;
+                result += " " + page + "/" + lineSum + " ";
 
             }
             //输入页码超过文本页码范围，提示出错
