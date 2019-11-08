@@ -33,6 +33,7 @@ public class ShowLog extends AnAction {
                 if (jLabel != null) {
                     Utils.showLog(jLabel);
                     int p = SettingConfig.instance().getPageNum();
+                    if (p==1) return;
                     TxtReader.instance().toPage(p--);
                     SettingConfig.instance().setPageNum(p);
                 }

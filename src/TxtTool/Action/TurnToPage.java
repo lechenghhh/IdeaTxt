@@ -28,6 +28,7 @@ public class TurnToPage extends AnAction {
 
         try {
             int p = Integer.parseInt(textNum);
+            if (p<1) p=1;
 
             ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow(TOOL_WINDOW_ID);
             if (toolWindow != null) {

@@ -37,13 +37,14 @@ public class TxtToolWindow implements ToolWindowFactory {
         lableText.setText("Hello World ! ");
 
         //设置按钮监听
-        btnLog.addActionListener(e -> {
+        btnLog.addActionListener(e -> {//显示伪装
             Utils.showLog(lableText);
             int p = SettingConfig.instance().getPageNum();
+            if (p==1) return;
             TxtReader.instance().toPage(p--);
             SettingConfig.instance().setPageNum(p);
-        });//显示伪装
-        btnNext.addActionListener(e -> {
+        });
+        btnNext.addActionListener(e -> {//下一页
             int p = SettingConfig.instance().getPageNum();
             lableText.setText(TxtReader.instance().toPage(p++));
             SettingConfig.instance().setPageNum(p);
