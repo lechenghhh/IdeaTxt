@@ -26,7 +26,7 @@
         <constraints/>
         <properties>
           <horizontalAlignment value="4"/>
-          <preferredSize width="1600" height="20"/>
+          <preferredSize width="1920" height="20"/>
           <text value="Hello World !"/>
         </properties>
       </component>
