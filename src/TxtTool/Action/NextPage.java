@@ -29,7 +29,7 @@ public class NextPage extends AnAction {
             });
 
             try {            // ToolWindow未初始化时，可能为空 2017/4/4 18:20
-                JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(0));
+                JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(2));
                 if (jLabel != null) {
                     int p = SettingConfig.instance().getPageNum();
                     jLabel.setText(" " + TxtReader.instance().toPage(p++));
