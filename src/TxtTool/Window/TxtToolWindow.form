@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="TxtTool.Window.TxtToolWindow">
-  <grid id="27dc6" binding="container" layout-manager="FlowLayout" hgap="1" vgap="1" flow-align="2">
+  <grid id="27dc6" binding="container" layout-manager="FlowLayout" hgap="1" vgap="1" flow-align="0">
     <constraints>
       <xy x="6" y="382" width="968" height="41"/>
     </constraints>
@@ -22,14 +22,6 @@
       <title-color color="-14078658"/>
     </border>
     <children>
-      <component id="5ced9" class="javax.swing.JLabel" binding="lableText">
-        <constraints/>
-        <properties>
-          <horizontalAlignment value="4"/>
-          <preferredSize width="1920" height="20"/>
-          <text value="Hello World !"/>
-        </properties>
-      </component>
       <component id="3edc1" class="javax.swing.JButton" binding="btnLog">
         <constraints/>
         <properties>
@@ -52,6 +44,14 @@
           <preferredSize width="24" height="24"/>
           <text value="P"/>
           <toolTipText value=""/>
+        </properties>
+      </component>
+      <component id="5ced9" class="javax.swing.JLabel" binding="lableText">
+        <constraints/>
+        <properties>
+          <horizontalAlignment value="2"/>
+          <preferredSize width="480" height="20"/>
+          <text value="Hello World !"/>
         </properties>
       </component>
     </children>

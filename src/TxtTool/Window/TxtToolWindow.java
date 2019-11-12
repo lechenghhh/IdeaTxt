@@ -4,6 +4,9 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.*;
 import com.intellij.ui.content.*;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -20,6 +23,8 @@ import TxtTool.Utils.Utils;
  */
 public class TxtToolWindow implements ToolWindowFactory {
 
+    private static final int PADDING_SIZE=108;
+
     private JPanel container;
     private JButton btnNext;
     private JButton btnLog;
@@ -31,6 +36,12 @@ public class TxtToolWindow implements ToolWindowFactory {
         Content content = contentFactory.createContent(getContent(), "", false);
         toolWindow.getContentManager().addContent(content);
 
+        //UI自适应宽度
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension lableSize = lableText.getPreferredSize();
+        lableSize.width = screenSize.width - PADDING_SIZE;
+        lableText.setPreferredSize(lableSize);
+
         //初始化
         TxtReader.instance();
         SettingConfig.instance().setPageNum(SettingConfig.instance().getPageNum() - 1);//因为next会下一页，所以先减少1
@@ -40,7 +51,7 @@ public class TxtToolWindow implements ToolWindowFactory {
         btnLog.addActionListener(e -> {//显示伪装
             Utils.showLog(lableText);
             int p = SettingConfig.instance().getPageNum();
-            if (p==1) return;
+            if (p == 1) return;
             TxtReader.instance().toPage(p--);
             SettingConfig.instance().setPageNum(p);
         });
