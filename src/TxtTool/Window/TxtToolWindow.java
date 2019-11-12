@@ -23,7 +23,7 @@ import TxtTool.Utils.Utils;
  */
 public class TxtToolWindow implements ToolWindowFactory {
 
-    private static final int PADDING_SIZE=108;
+    private static final int PADDING_SIZE = 128;
 
     private JPanel container;
     private JButton btnNext;
