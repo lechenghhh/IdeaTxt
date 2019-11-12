@@ -50,7 +50,7 @@ public class TxtFormat {
                     if (str == "") {    //如果不想保留换行符直接写入就好，不用多此一举
                         continue;
                     } else {
-                        writer.write(str);    //如果想保留换行符，可以利用str+"\r\n" 来在末尾写入换行符
+                        writer.write(str + " ");    //如果想保留换行符，可以利用str+"\r\n" 来在末尾写入换行符
                     }
                 }
                 writer.close();
