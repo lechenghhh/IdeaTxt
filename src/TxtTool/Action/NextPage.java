@@ -32,7 +32,7 @@ public class NextPage extends AnAction {
                 JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(0));
                 if (jLabel != null) {
                     int p = SettingConfig.instance().getPageNum();
-                    jLabel.setText(TxtReader.instance().toPage(p++));
+                    jLabel.setText(" " + TxtReader.instance().toPage(p++));
                     SettingConfig.instance().setPageNum(p);
                 }
             } catch (Exception e1) {

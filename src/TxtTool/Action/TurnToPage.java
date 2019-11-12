@@ -28,7 +28,7 @@ public class TurnToPage extends AnAction {
 
         try {
             int p = Integer.parseInt(textNum);
-            if (p<1) p=1;
+            if (p < 1) p = 1;
 
             ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow(TOOL_WINDOW_ID);
             if (toolWindow != null) {
@@ -43,7 +43,7 @@ public class TurnToPage extends AnAction {
                     JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(0));
                     if (jLabel != null) {
 
-                        jLabel.setText(TxtReader.instance().toPage(p++));
+                        jLabel.setText(" " + TxtReader.instance().toPage(p++));
                         SettingConfig.instance().setPageNum(p);
 
                     }

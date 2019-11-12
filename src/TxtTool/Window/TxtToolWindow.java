@@ -45,7 +45,7 @@ public class TxtToolWindow implements ToolWindowFactory {
         //初始化
         TxtReader.instance();
         SettingConfig.instance().setPageNum(SettingConfig.instance().getPageNum() - 1);//因为next会下一页，所以先减少1
-        lableText.setText("Hello World ! ");
+        lableText.setText(" Hello World ! ");
 
         //设置按钮监听
         btnLog.addActionListener(e -> {//显示伪装
@@ -57,7 +57,7 @@ public class TxtToolWindow implements ToolWindowFactory {
         });
         btnNext.addActionListener(e -> {//下一页
             int p = SettingConfig.instance().getPageNum();
-            lableText.setText(TxtReader.instance().toPage(p++));
+            lableText.setText(" " + TxtReader.instance().toPage(p++));
             SettingConfig.instance().setPageNum(p);
         });
     }
