@@ -18,7 +18,7 @@ public class FilePath extends AnAction {
 
         String filePath = Messages.showInputDialog(
                 project,
-                "当前路径:" + SettingConfig.instance().getFilePath(),
+                "当前路径: " + SettingConfig.instance().getFilePath(),
                 "请设置文件路径",
                 Messages.getQuestionIcon());
         if (!new File(filePath).exists()) {
@@ -30,5 +30,6 @@ public class FilePath extends AnAction {
         }
         SettingConfig.instance().setFilePath(filePath);
         TxtReader.instance().init(filePath);
+        TurnToPage.toPage(project, 1);
     }
 }

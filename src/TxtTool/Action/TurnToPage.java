@@ -30,33 +30,36 @@ public class TurnToPage extends AnAction {
             int p = Integer.parseInt(textNum);
             if (p < 1) p = 1;
 
-            ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow(TOOL_WINDOW_ID);
-            if (toolWindow != null) {
-                // 无论当前状态为关闭/打开，进行强制打开ToolWindow 2017/3/21 16:21
-                toolWindow.show(new Runnable() {
-                    @Override
-                    public void run() {
-                    }
-                });
-
-                try {            // ToolWindow未初始化时，可能为空 2017/4/4 18:20
-                    JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(2));
-                    if (jLabel != null) {
-
-                        jLabel.setText(" " + TxtReader.instance().toPage(p++));
-                        SettingConfig.instance().setPageNum(p);
-
-                    }
-                } catch (Exception e1) {
-                    e1.printStackTrace();
-                }
-            }
-
+            toPage(project, p);
         } catch (Exception x) {
             Messages.showMessageDialog(project,
                     "页码有误,请重试!",
                     "提示:",
                     Messages.getInformationIcon());
+        }
+    }
+
+    public static void toPage(Project project, int p) {
+        ToolWindow toolWindow = ToolWindowManager.getInstance(project).getToolWindow(TOOL_WINDOW_ID);
+        if (toolWindow != null) {
+            // 无论当前状态为关闭/打开，进行强制打开ToolWindow 2017/3/21 16:21
+            toolWindow.show(new Runnable() {
+                @Override
+                public void run() {
+                }
+            });
+
+            try {            // ToolWindow未初始化时，可能为空 2017/4/4 18:20
+                JLabel jLabel = (JLabel) (toolWindow.getContentManager().getContent(0).getComponent().getComponent(2));
+                if (jLabel != null) {
+
+                    jLabel.setText(" " + TxtReader.instance().toPage(p++));
+                    SettingConfig.instance().setPageNum(p);
+
+                }
+            } catch (Exception e1) {
+                e1.printStackTrace();
+            }
         }
     }
 }
